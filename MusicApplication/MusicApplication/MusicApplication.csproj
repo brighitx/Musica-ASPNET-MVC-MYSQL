@@ -191,8 +191,33 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\album\BlindingLights.jpg" />
+    <Content Include="img\album\Currents.jpg" />
+    <Content Include="img\album\DanceMonkey.jpg" />
+    <Content Include="img\album\DontStartNow.jpg" />
+    <Content Include="img\album\Electricity.jpg" />
+    <Content Include="img\album\Falling.jpg" />
+    <Content Include="img\album\FuturePresentPast.jpg" />
+    <Content Include="img\album\Imwithyou.jpg" />
+    <Content Include="img\album\LifeisGood.jpg" />
+    <Content Include="img\album\Memories.jpg" />
+    <Content Include="img\album\Mezmerize.jpg" />
+    <Content Include="img\album\PearlJam.jpg" />
+    <Content Include="img\album\PleaseExcuseMeforBeingAntisocial.jpg" />
+    <Content Include="img\album\Roxanne.jpg" />
+    <Content Include="img\album\TheGame.jpg" />
+    <Content Include="img\album\Tusa.jpg" />
+    <Content Include="img\album\Yummy.jpg" />
+    <Content Include="img\festival\BBKLive.jpg" />
+    <Content Include="img\festival\MadCool.jpg" />
+    <Content Include="img\festival\ResurrectionFest.png" />
+    <Content Include="img\festival\woa.jpg" />
+    <Content Include="img\FondoLoginn.jpg" />
+    <Content Include="img\JumboTFondo.jpg" />
+    <Content Include="img\LogoIni.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="img\pdf\Musica.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -215,8 +240,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Top.cshtml" />
+    <Content Include="Views\Home\Festival.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -241,6 +266,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Canciones\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

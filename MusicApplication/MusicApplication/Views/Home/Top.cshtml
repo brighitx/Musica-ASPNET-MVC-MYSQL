@@ -1,24 +1,33 @@
 ﻿@model  List<MusicApplication.Models.Cancion>
 @{
-    ViewBag.Title = "Música ";
+    ViewBag.Title = "Top 10";
 }
 
-<div class="jumbotron">
-    <p class="lead"><i class="fa fa-music"></i> Escucha la música del momento gratis </p></i>
-    <h5>@Html.ActionLink("Descubre", "Archivo", "Home", new { target = "_blank", @class = "btn btn-info", role = "button" })</h5>
-</div>
-
 <table class="table table-striped">
+    <tr class="danger">
+        <th>Top</th>
+        <th>Titulo</th>
+        <th>Artista</th>
+        <th>Género</th>
+        <th>Año</th>
+        <th>Audio</th>
+    </tr>
     <tbody>
         @foreach (var cancion in Model)
         {
             <tr>
+                <td><h1>@cancion.id</h1></td>
                 <td>
-                    <h2>@cancion.title</h2>
+                    <h3>@cancion.title</h3>
+                </td>
+                <td>
                     <h4>@cancion.artist</h4>
-                    <h5>@cancion.musicgenre</h5>
-                    <h5>@cancion.year</h5>
-                    <h5>@Html.ActionLink("Descargar", "Audio", "Home", new { Song = @cancion.path }, new { target = "_blank", @class = "btn btn-danger", role = "button" })</h5>
+                </td>
+                <td>
+                    <h4>@cancion.musicgenre</h4>
+                </td>
+                <td>
+                    <h4>@cancion.year</h4>
                 </td>
                 <td>
                     <a class="thumbnail">

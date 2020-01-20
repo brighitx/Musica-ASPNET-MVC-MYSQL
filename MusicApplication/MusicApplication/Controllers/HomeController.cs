@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusicApplication.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +11,36 @@ namespace MusicApplication.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var cancionService = new CancionService();
+            var model = cancionService.ObtenerCanciones();
+
+            return View(model);
         }
 
-        public ActionResult About()
+        public ActionResult Top()
         {
-            ViewBag.Message = "Your application description page.";
+            var cancionService = new CancionService();
+            var model = cancionService.ObtenerTop();
 
-            return View();
+            return View(model);
         }
 
-        public ActionResult Contact()
+        public ActionResult Festival()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+
+        public FileResult Audio(string Song)
+        {
+            var ruta = Server.MapPath("../Canciones/" + Song);
+            return File(ruta, "audio/mp3", Song);
+        }
+
+        public FileResult Archivo()
+        {
+            var ruta = Server.MapPath("../img/pdf/Musica.pdf");
+            return File(ruta, "application/pdf ", "TeoriaMusica.pdf");
+        }
+
     }
 }
