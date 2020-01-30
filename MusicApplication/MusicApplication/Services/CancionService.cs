@@ -11,11 +11,15 @@ namespace MusicApplication.Services
 {
     public class CancionService
     {
+        AccesoBD acceso;
+        public CancionService() 
+        {
+            acceso = new AccesoBD();
+        }
         public List<Cancion> ObtenerCanciones()
         {
             List<Cancion> opcion = new List<Cancion>();
-            AccesoBD acceso = new AccesoBD();
-            string sql = "SELECT * FROM songlist Where id>10";
+            string sql = "SELECT * FROM songlist";
             MySqlDataReader dr = acceso.sendQuery(sql);
             while (dr.Read())
             {
@@ -27,7 +31,6 @@ namespace MusicApplication.Services
         public List<Cancion> ObtenerTop()
         {
             List<Cancion> opcion = new List<Cancion>();
-            AccesoBD acceso = new AccesoBD();
             string sql = "SELECT * FROM songlist Where id<11";
             MySqlDataReader dr = acceso.sendQuery(sql);
             while (dr.Read())
